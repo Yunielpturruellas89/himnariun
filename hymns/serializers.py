@@ -20,7 +20,7 @@ class HymnSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Hymn
-        fields = ('name', 'number', 'author', 'year', 'favorite', 'verses')
+        fields = ('name', 'number', 'author', 'year', 'favorite', 'biblical_quote', 'verses')
 
     def create(self, validated_data):
         verses_data = validated_data.pop('verses')

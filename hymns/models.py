@@ -7,6 +7,7 @@ class Hymn(models.Model):
     author = models.CharField(max_length=255, blank=True, null=True)  # Allow null for unknown authors
     year = models.IntegerField(blank=True, null=True)  # Allow null for unknown years
     favorite = models.BooleanField(default=False)
+    biblical_quote = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return self.name
